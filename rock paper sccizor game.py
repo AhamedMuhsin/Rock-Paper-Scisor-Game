@@ -1,15 +1,20 @@
+# importing module use in this progam
 import random
 
+# write speak functions
 def speak(str):
     from win32com.client import Dispatch
     speak = Dispatch("SAPI.SpVoice")
     speak.Speak(str)
 
+# making token of this game
 token = ["r","p","s"]
 
+# making welcome screen
 print("\t\t\t\t\tWelcome to Rock Paper and Scissor Game\n")
 speak("\t\t\t\t\tWelcome to Rock Paper and Scissor Game\n")
 
+# print the insturctions of this game
 print("Instruction of this Game\n1. In this game you have to select any of this token given here\n"
       "2. And then computer will randomly chose any token\n3. You have to type only the first letter of the token\n"
       "4. In this Game we have point system so if your point is less you will Lose\n")
@@ -17,25 +22,29 @@ speak("Instruction of this Game\n1. In this game you have to select any of this 
       "2. And then computer will randomly chose any token\n3. You have to type only the first letter of the token\n"
       "4. In this Game we have point system so if your point is less you will Lose\n")
 
+# make name input functions
 speak("Enter your name : ")
 name = input("Enter your name : ")
 
 print("Choose r for rock\n""Choose p for paper\n""Choose s for scissor")
 speak("Choose r for rock\n""Choose p for paper\n""Choose s for scissor")
 
+# Game main varibles 
 chance = 5
 no_of_chance = 0
 Human_point = 0
 Muhsin_point = 0
 
+# make gameloop for start the game
 while no_of_chance < chance:
     _player = input(" Rock , Paper , Scissor : ")
     _random = random.choice(token)
 
+#     make tie situations command 
     if _player == _random:
         print(f"Tie both {name} and Muhsin have no point")
         speak(f"Tie both {name} and Muhsin have no point")
-
+# make rock command 
     elif _player == "r" and _random == "p":
         Muhsin_point = Muhsin_point + 1
         print(f"{name} guess {_player} and Muhsin guess {_random}\n")
@@ -54,6 +63,7 @@ while no_of_chance < chance:
         print(f"Muhsin point is {Muhsin_point} and {name} point is {Human_point}\n")
         speak(f"Muhsin point is {Muhsin_point} and {name} point is {Human_point}\n")
 
+# make paper command 
     elif _player == "p" and _random == "s":
         Muhsin_point = Muhsin_point + 1
         print(f"{name} guess {_player} and Muhsin guess {_random}\n")
@@ -72,6 +82,7 @@ while no_of_chance < chance:
         print(f"Muhsin_point is {Muhsin_point} and {name} point is {Human_point}\n")
         speak(f"Muhsin point is {Muhsin_point} and {name} point is {Human_point}\n")
 
+# make scizor command
     elif _player == "s" and _random == "r":
         Muhsin_point = Muhsin_point + 1
         print(f"{name} guess {_player} and Muhsin guess {_random}\n")
@@ -90,7 +101,7 @@ while no_of_chance < chance:
         print(f"Muhsin point is {Muhsin_point} and {name} point is {Human_point}\n")
         speak(f"Muhsin point is {Muhsin_point} and {name} point is {Human_point}\n")
 
-
+# to print chances 
     else:
         print(f"{name} your input is wrong please input right token letter")
         speak(f"{name} your input is wrong please input right token letter")
@@ -98,6 +109,7 @@ while no_of_chance < chance:
     print(f"{chance - no_of_chance} chance is left out of {chance}\n")
     speak(f"{chance - no_of_chance} chance is left out of {chance}\n")
 
+# gamover command
 if Muhsin_point == Human_point:
     print(f"Tie both {name} and Muhsin have same point")
     speak(f"Tie both {name} and Muhsin have same point")
