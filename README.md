@@ -5,7 +5,7 @@
 		The Computer will automitically Gives you instructions 
 	</p>
 	<h1>How to Play This Game</h1>
-	<p>To play this Game The computer Gives you instruction that<br>
+	<p>To play this Game You Have to Download The Exe Provide in it and then if you install then double tap on it the program will start then the computer will give you instructions<br>
 		<ul>
       <li><b>Choose p for Paper</b></li>
 			<li><b>Choose r for Rock</b></li>
@@ -13,5 +13,8 @@
 		</ul>
 		Then you have to choose any of this Keyword and then Computer
 		will Random choose any of this Keyword then For Example if you choose rock and computer choose paper then computer will win and also computer will one point 
+	</p>
+	<h1>How to Download The Exe</h1>
+	<p>To download the exe you have tap on rock paper scizor game.exe otherwise tap on the click here <a href="https://github.com/AhamedMuhsin/Rock-Paper-Scisor-Game/blob/master/rock%20paper%20sccizor%20game.exe">Click Here To Dowload The Exe</a> you also goes to that page
 	</p>
 	<h3>Thanks For Coming</h3>
